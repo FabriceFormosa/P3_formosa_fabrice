@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+   <title>OHMYFOOD</title>
+   <!-- https://www.pierre-giraud.com/html-css-apprendre-coder-cours/meta-viewport/ -->
+   <meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no"/>
+   <!-- https://github.com/necolas/normalize.css.git -->
+   <link rel="stylesheet"  href="css/normalize.css"/>
+   <link rel="stylesheet"  href="css/styles.css"/>
+   <!-- https://www.pierre-giraud.com/html-css-apprendre-coder-cours/font-family-google/ -->
+   <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Open+Sans+Roboto"/>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/ddd9ca013b.js" crossorigin="anonymous"></script>
+   <!-- https://cdnjs.com/libraries/font-awesome/5.15.4  https://fontawesome.com/v5/icons/chart-line?s=solid-->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+</head>
+
+<body >
+   <!-- spin loader -->
+   <div class="loader">
+      <i class="fa-solid fa-utensils"></i>
+   </div>
+   <!-- fin spin loader -->
+   
+   <main>
+      <!-- section menu navigation -->
+      <header  >
+         <!-- logo -->
+         <div id="logo">
+            <img src="images/logo/ohmyfood@2x.svg" alt="image logo">
+         </div>
+         <!-- searchbar -->
+         <div class="container_search_bar">
+            <form class="searchbar"  method="post">
+               <div class="icone-location-dot">
+                  <i class="fa-solid fa-location-dot style-location-dot" ></i>
+               </div>
+               <input type="text" placeholder="Paris,Belleville" name="search">
+            </form>
+         </div>
+         <!-- bouton de navigation -->
+         <div class="container_header_text_button">
+            <h2>Réservez le menu qui vous convient</h2>
+            <p>Découvrez des restaurants d'exception,sélectionnés par nos soins</p>
+            <a href="#restaurants"><div class="btn_nav" >Explorer nos restaurants</div></a>
+         </div>
+      </header>
+      <!-- fin section menu navigation -->
+      
+      <!-- section fonctionnements procedure à suivre-->
+      <div class="fonctionnements">  
+         <h3>Fonctionnement</h3>   
+         <div class="fonctionnement">
+            <p class="numéro">1</p>
+            <i class="fa-solid fa-mobile-screen-button"></i>
+            <h3>Choisissez un restaurant</h3>
+         </div>
+         <div class="fonctionnement">
+            <p class="numéro">2</p>
+            <i class="fa-solid fa-list"></i>
+            <h3>Composez votre menu</h3>
+         </div>
+         <div class="fonctionnement">
+            <p class="numéro">3</p>
+            <i class="fa-solid fa-store"></i>
+            <h3>Dégustez au restaurant</h3>
+         </div>
+      </div> 
+      <!--fin section fonctionnements procedure à suivre -->
+      
+      <!-- section liste restaurant -->
+      <div class ="liste_restaurants" id="restaurants">
+         <h2>Restaurants</h2>
+         <div class="les_flyers_restaurants">
+            <!-- flyer restaurant -->
+            <div class="card">    
+               <a href="menu_1.html" style="display:block;width:100%;height:100%;">         
+                  <!-- image restaurant -->
+                  <div class="card-image"><h3>Nouveau</h3><img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du gout" /></div>
+                  <!-- Corp du flyer -->
+                  <div class="card-body">
+                     <div>
+                        <!-- nom du restaurant -->
+                        <div class="card-title">
+                           <h4>La palette du goût</h4>
+                        </div>
+                        <!--  localisation du restaurant -->
+                        <div class="card-geolocalisation">
+                           <p>Ménilmontant</p>
+                        </div>
+                     </div>
+                     <!-- restaurant favori -->
+                     <div class="card-notation">
+                        <i class="fa-solid fa-heart"></i>
+                     </div>
+                  </div>
+                  <!-- Fin du flyer restaurant -->
+               </a>
+            </div>
+            <!-- flyer restaurant -->
+            <div class="card">
+               <a href="menu_2.html" style="display:block;width:100%;height:100%;">
+                  <!-- image restaurant -->
+                  <div class="card-image"><h3>Nouveau</h3><img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="la note enchantée" ></div>
+                  <!-- Corp du flyer -->
+                  <div class="card-body">
+                     <div>
+                        <!-- nom du restaurant -->
+                        <div class="card-title">
+                           <h4>La note enchantée</h4>
+                        </div>
+                        <!--  localisation du restaurant -->
+                        <div class="card-geolocalisation">
+                           <p> Charonne</p>
+                        </div>
+                     </div>
+                     <!-- restaurant favori -->
+                     <div class="card-notation">
+                        <i class="fa-regular fa-heart"></i>
+                     </div>
+                     
+                  </div>
+                  <!-- Fin du flyer restaurant -->
+               </a>
+            </div>
+            <!-- flyer restaurant -->
+            <div class="card">
+               <a href="menu_3.html" style="display:block;width:100%;height:100%;">
+                  <!-- image restaurant -->
+                  <div class="card-image"><img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="A la francaise" /></div>
+                  <!-- Corp du flyer -->
+                  <div class="card-body">
+                     
+                     <div>
+                        <!-- nom du restaurant -->
+                        <div class="card-title">
+                           <h4> A la francaise</h4>
+                        </div>
+                        <!--  localisation du restaurant -->
+                        <div class="card-geolocalisation">
+                           <p>Cité Rouge</p>
+                        </div>
+                     </div>
+                     <!-- restaurant favori -->
+                     <div class="card-notation">
+                        <i class="fa-regular fa-heart"></i>
+                     </div>
+                  </div>
+                  <!-- Fin du flyer restaurant -->
+               </a>
+            </div>    
+            <div class="card">
+               <a href="menu_4.html" style="display:block;width:100%;height:100%;"> 
+                  <!-- image restaurant -->
+                  <div class="card-image"><img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Hotel du port" /></div>
+                  <!-- Corp du flyer -->
+                  <div class="card-body">
+                     <div>
+                        <!-- nom du restaurant -->
+                        <div class="card-title">
+                           <h4>Le delice des sens</h4>
+                        </div>
+                        <!--  localisation du restaurant -->
+                        <div class="card-geolocalisation">
+                           <p>Folie Méricourt</p>
+                        </div>
+                        
+                     </div>
+                     <!-- restaurant favori -->
+                     <div class="card-notation">
+                        <i class="fa-regular fa-heart"></i>
+                     </div>
+                     
+                  </div>
+                  <!-- Fin du flyer restaurant -->
+               </a>
+            </div>
+         </div>
+      </div>
+      <!-- fin section flyers restaurants -->
+      
+      <!-- section footer -->
+      <footer >
+         <div class="footercols" >
+            <!-- logo footer -->
+            <div id="logofooter">
+               <img src="images/logo/ohmyfood@2x.svg" alt="image logo">
+            </div>
+            <!-- navigation footer -->
+            <p><i class="fa-solid fa-utensils"></i><a href="page-test.html">Proposer un restaurant</a></p>
+            <p><i class="fa-solid fa-handshake-angle"></i><a href="page-test.html">Devenir partenaire</a></p>
+            <p><a href="page-test.html">Mention légale</a></p>
+            <p><a href="mailto:noreply@ohmyfood.com">Contact</a></p>
+         </div>
+      </footer>
+   </main>
+</body>
+</html>

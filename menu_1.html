@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>OHMYFOOD</title>
+    <!-- https://www.pierre-giraud.com/html-css-apprendre-coder-cours/meta-viewport/ -->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no"/>
+    <!-- https://github.com/necolas/normalize.css.git -->
+    <link rel="stylesheet"  href="css/normalize.css"/>
+    <link rel="stylesheet"  href="css/menu.css"/>
+    <!-- https://www.pierre-giraud.com/html-css-apprendre-coder-cours/font-family-google/ -->
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Open+Sans+Roboto"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ddd9ca013b.js" crossorigin="anonymous"></script>
+    <!-- https://cdnjs.com/libraries/font-awesome/5.15.4  https://fontawesome.com/v5/icons/chart-line?s=solid-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+</head>
+
+
+<body class="body">
+    
+    <!-- debut section header -->
+    <header  >
+        <!-- fleche navigation -->
+        <span><a href="index.html"><i class="fa-solid fa-arrow-left"></i></a></span>
+        <!-- logo header -->
+        <div id="logo">
+            <img src="images/logo/ohmyfood@2x.svg" alt="image logo">
+        </div>
+    </header>
+    <!-- fin section header -->
+    
+    <!-- section menu de la carte -->
+    <div class="card-menu">
+        <!-- Image plat restaurant -->
+        <div class="card-menu-image"><img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du gout" /></div>
+        <!-- nom restaurant -->
+        <div class="nom-restaurant">
+            <h1>la palette du goût</h1>
+            <i class="fa-regular fa-heart"></i>
+        </div>
+        <!-- section menu entrees - plats desserts -->
+        <div class="card-menu-text">   
+            <!-- Entrée -->
+            <div class="menu-entrées">
+                <h2>ENTREES</h2> 
+                <p class="séparateur"></p>
+                <!-- Corp de notre carte -->
+                <div class="animation_menu">
+                    <div class="card-submenu">
+                        <!-- Entrée n°1 -->
+                        <div class="card-submenu-title">
+                            <h4>Fricassée d'escargot</h4>
+                        </div>
+                        <div class = "card-submenu-description-tarif"> 
+                            <div class="card-submenu-description">
+                                <p>Au piment d'Espelette</p>
+                            </div>
+                            <div class="card-submenu-tarif">
+                                <p>25€</p>
+                            </div>
+                            <!-- <div class="test_transX"><p>test  transX</p>
+                            </div> -->
+                        </div>
+                    </div>   
+                    
+                    <!-- Entrée n°2 -->
+                    <div class="card-submenu">
+                        
+                        <div class="card-submenu-title">
+                            <h4>Foie gras de canard mi-cuit</h4>
+                        </div>
+                        <div class = "card-submenu-description-tarif">
+                            <div class="card-submenu-description">
+                                <p>Et ses copeaux de truffe noire</p>
+                            </div>
+                            <div class="card-submenu-tarif">
+                                <p>35€</p>
+                            </div> 
+                        </div>
+                    </div>
+                    <!-- Entrée n°3 -->
+                    <div class="card-submenu">
+                        <div class="card-submenu-title">
+                            <h4>Oeuf au plat</h4>
+                        </div>
+                        <div class = "card-submenu-description-tarif">    
+                            <div class="card-submenu-description">
+                                <p>Assaisonné à la truffe sur lit de caviar</p>
+                            </div>
+                            <div class="card-submenu-tarif">
+                                <p>20€</p>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Plats -->
+            <div class="menu-plats">
+                <h2>PLATS</h2>
+                <p class="séparateur"></p>       
+                <!-- Plat n°1 -->
+                <div class="animation_menu">
+                    <div class="card-submenu">                        
+                        <div class="card-submenu-title">
+                            <h4>Filet de boeuf aux herbes</h4>
+                        </div>
+                        <div class = "card-submenu-description-tarif"> 
+                            <div class="card-submenu-description">
+                                <p>Accompagné de sa ribambelle de légumes</p>
+                            </div>
+                            <div class="card-submenu-tarif">
+                                <p>40€</p>
+                            </div> 
+                        </div>
+                    </div>
+                    <!-- Plat n°2 -->
+                    <div class="card-submenu">
+                        
+                        <div class="card-submenu-title">
+                            <h4>Parmentier de queue de boeuf</h4>
+                        </div>
+                        <div class = "card-submenu-description-tarif"> 
+                            <div class="card-submenu-description">
+                                <p>À la truffe noire sur sa purée de panais</p>
+                            </div>
+                            <div class="card-submenu-tarif">
+                                <p>35€</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- Plat n°3 -->
+                    <div class="card-submenu">
+                        
+                        <div class="card-submenu-title">
+                            <h4>Filet de turbot</h4>
+                        </div>
+                        <div class = "card-submenu-description-tarif"> 
+                            <div class="card-submenu-description">
+                                <p>Aux agrumes</p>
+                            </div>
+                            <div class="card-submenu-tarif">
+                                <p>44€</p>
+                            </div> 
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Desserts -->
+            <div class="menu-desserts">
+                <h2 class="dessert">DESSERTS</h2> 
+                <p class="séparateur"></p> 
+                <!-- Dessert n°1 -->
+                <div class="animation_menu">
+                    <div class="card-submenu">
+                        
+                        <div class="card-submenu-title">
+                            <h4>Paris-Brest</h4>
+                        </div>
+                        <div class = "card-submenu-description-tarif"> 
+                            <div class="card-submenu-description">
+                                <p>Revisité</p>
+                            </div>
+                            <div class="card-submenu-tarif">
+                                <p>18€</p>
+                            </div> 
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Dessert n°2 -->
+                    
+                    <div class="card-submenu">
+                        
+                        <div class="card-submenu-title">
+                            <h4>Macaron au chocolat d'exception</h4>
+                        </div>
+                        <div class = "card-submenu-description-tarif">
+                            <div class="card-submenu-description">
+                                <p>Et glace à la vanille de Madagascar</p>
+                            </div>
+                            <div class="card-submenu-tarif">
+                                <p>22€</p>
+                            </div> 
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- Dessert n°3 -->
+                    
+                    <div class="card-submenu">
+                        
+                        <div class="card-submenu-title">
+                            <h4>Mousse au chocolat</h4>
+                        </div>
+                        <div class = "card-submenu-description-tarif">
+                            <div class="card-submenu-description">
+                                <p>Au piment d'Espelette et à la truffe noire</p>
+                            </div>
+                            <div class="card-submenu-tarif">
+                                <p>23€</p>
+                            </div> 
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> 
+        </div> 
+        <!-- fin section menu entrees - plats desserts -->
+        
+        <!-- bouton commande menu -->
+        <div class="container_btn_cmd">
+            <div class="btn_cmd">Commandez</div> 
+        </div>
+    </div>
+    <!-- fin section menu de la carte -->
+    <!-- section footer -->
+    <footer >
+        <div class="footercols" >
+            <!-- logo footer -->
+            <div id="logofooter">
+                <img src="images/logo/ohmyfood@2x.svg" alt="image logo">
+            </div>
+            <!-- navigation footer -->
+            <p><i class="fa-solid fa-utensils"></i><a href="page-test.html">Proposer un restaurant</a></p>
+            <p><i class="fa-solid fa-handshake-angle"></i><a href="page-test.html">Devenir partenaire</a></p>
+            <p><a href="page-test.html">Mention légale</a></p>
+            <p><a href="mailto:noreply@ohmyfood.com">Contact</a></p>
+        </div>
+    </footer>
+    <!-- fin section footer -->
+    
+</body>
+
+</html>
+
+
