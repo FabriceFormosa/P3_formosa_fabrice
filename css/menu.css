@@ -121,94 +121,91 @@ header i{
    
 }
 
-/* animation menu déroulant sur axe Y*/
-.animation_menu
-{
-   width: auto;
-   display: flex;
-   flex-direction: column;
-   row-gap: 15px;
-   overflow: hidden;
-   /* background-color: aqua; */
-   animation-duration: 1s;
-   animation-name: glissement;
-   animation-iteration-count: 1;
-}
-
-@keyframes glissement {
-   
-   0%{
-      transform: translateY(-150%) ; 
-   }
-   
-   100%
-   {
-      transform: translateY(0%); 
-   }
-} 
-
-
-.test_transX p
-{
-   position: absolute;
-   background-color: #99E2D0;
-   /* margin-left: 50px; */
-   font-weight: bold;
-   overflow: hidden;
- 
-}
-
-/* animation selection menu */
-.card-submenu-description-tarif:active
-{
-   /* background-color: brown; */
-   animation-duration: 1s;
-   animation-name: glissement_horizontal;
-   animation-iteration-count: 1;
-}
-
-@keyframes glissement_horizontal {
-   0%{
-      transform:translateX(0%)
-   }
-   
-   100%
-   {
-      transform: translateX(-20%);
-   }
-}
-
-/* corps entree 1,.. plat 1,.. dessert 1,... */
-.card-submenu{
-   display: flex;
-   border-radius: 20px;
+.dishes__card {
+   height: 70px;
+   width: 100%;
+   padding-left: 10px;
    background-color: white;
-   flex-direction: column;
-   text-align:justify;  /*1*/
-   padding: 10px 20px; /*2*/
-}
-
-.card-submenu-description-tarif{
    display: flex;
-   justify-content: space-between;
-   /* overflow: hidden; */
-   flex-shrink: 2;
-   /* background-color:#0065fc; */
-   
+   align-items: center;
+   border-radius: 10px;
+   margin-bottom: 15px;
+   overflow: hidden;
+   box-shadow: 2px 2px 10px #c4c3c0;
+   animation: appear 0.5s;
+   animation-timing-function: cubic-bezier(0.57, -0.3, 0.36, 1.2);
+   transform: scale(0);
+   animation-fill-mode: both;
 }
-
-.card-submenu-title {
-   text-align:justify;
-   /* background-color:#FF79DA; */
-}
-
-.card-submenu-description {
-   text-align:justify;
+.dishes__card__txt {
+   width: 90%;
+   white-space: nowrap;
+   overflow: hidden;
    text-overflow: ellipsis;
 }
-.card-submenu-tarif {
-   text-align:justify;
-   font-weight: bold;
+.dishes__card__txt--over {
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.dishes__card__price {
+   margin-left: 10px;
+}
+.dishes__card__check {
+   height: 70px;
+   width: 60px;
+   opacity: 0;
+   background-color: #99E2D0;
+   margin-left: 25px;
+   margin-right: -70px;
+   border-radius: 0 10px 10px 0;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.7s ease-in-out;
+}
+
+
+.dishes__card:hover :nth-child(3) {
+   opacity: 1;
+   margin-right: 0px;
+   
+}
+
+.check_icons
+{
+   transition: all 1s ease-in-out;
+}
+
+.dishes__card:hover .check_icons {
+   opacity: 1;
+   transform: rotate(-360deg);
+}
+
+
+
+@keyframes appear {
+   0% {
+      transform: scale(0);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+.delay1 {
+   animation-delay: 0.1s;
+}
+
+.delay2 {
+   animation-delay: 0.3s;
+}
+
+.delay3 {
+   animation-delay: 0.6s;
+}
+
+.delay4 {
+   animation-delay: 0.9s;
 }
 
 /* bouton commande */
@@ -250,6 +247,13 @@ Section footer
 ==========================================================================================
 */
 
+.footer__logo {
+   font-size: 24px;
+   font-family: "Shrikhand", sans-serif;
+   color: white;
+   margin-bottom: 15px;
+}
+
 footer p
 {
    display: inline;
@@ -274,10 +278,6 @@ footer i{
    color:white;
 }
 
-.footercols a:hover
-{
-   color:#9356DC;
-}
 
 /*
 ==========================================================================================
@@ -310,19 +310,14 @@ Tablette
    }
    
    /*----------------------------------------------- section menu de la carte */
-   .card-menu
-   {
-      background-color: #99E2D0;
-   }
    .nom-restaurant
    {
       width:98%;
       display: flex;position: absolute;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       background-color:#f2f2f2;
-      padding-left: 15%;
-      padding-right:15%;
+      gap: 20px ;
       border-top-left-radius: 40px;
       border-top-right-radius: 40px;
       top: 300px;
@@ -372,7 +367,6 @@ Mobile
    /* Centrage logo */
    
    header i{
-      /* background-color: #FF79DA; */
       font-weight:bolder;
       color: black;
    }
@@ -393,7 +387,6 @@ Mobile
    {
       display:flex ;
       flex-direction: column;
-      /* background-color: aqua; */
       row-gap: 15px;
       padding: 15px;
    }
@@ -406,8 +399,8 @@ Mobile
       gap: 15px;
       border-radius: 20px;
    }
-
-
+   
+   
    /*------------------------------------------------------ section menu */
    .card-menu-image {
       height: 220px;/*1*/
@@ -415,8 +408,7 @@ Mobile
       overflow: hidden;/*3*/
    }
    .card-menu-image img {
-      width: 100%;/*4*/
-      /*5 - Méthode de centrage en fonction de la taille de l'image */
+      width: 100%;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -466,38 +458,12 @@ Mobile
       row-gap: 15px;
    }
    
-   .card-submenu{
-      display: flex;
-      flex-direction: column;
-      width: auto;
-      border-radius: 20px;
-      background-color: white;
-      text-align:justify;  /*1*/
-      padding: 10px 20px; /*2*/
-   }
-   
-   .card-submenu-title {
-      text-align:justify;
-   }
-   
-   .card-submenu-description {
-      width: 270px;
-      /* background-color:coral; */
-   }
-   
-   .card-submenu-description p {
-      width: 90%;
-      text-align:justify;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-   }
-   
    /*---------------------------------------------- section footer */
    footer .footercols #logofooter img {
       width: 100px;
       
    }
+   
    .footercols
    {
       width:100%;
@@ -511,11 +477,6 @@ Mobile
    .footercols h3 a {
       color:white;
    }
-   
-   
-   
-   
- 
    
 }
 
