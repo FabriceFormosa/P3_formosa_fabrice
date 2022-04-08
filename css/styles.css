@@ -171,6 +171,10 @@ header div img
    row-gap: 15px;
    padding: 15px;
 }
+#title_fonctionnement{
+   
+   margin-left: -50%;
+}
 
 .numéro{
    color: white;
@@ -396,6 +400,11 @@ Desktop
       height: 60px;
       border-radius: 20px;
    }
+
+   #title_fonctionnement{
+   
+      margin-left: 0;
+   }
    
    /*--------------------------------------------- debut section liste flyers restaurants */
    
@@ -460,6 +469,11 @@ Tablette
       border: 1px solid #d9d9d9;
       box-shadow: 3px 3px 5px  #999;
       border-radius: 20px;
+   }
+
+   #title_fonctionnement{
+   
+      margin-left: 0;
    }
    
    /*---------------------------------------- debut flyer restaurant -- */
