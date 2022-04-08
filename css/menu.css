@@ -16,17 +16,21 @@
 /*----------------------------------------------------- debut section body */
 .body
 {
-   width: 50%;
+   width: 100%;
    margin-right: auto;
    margin-left: auto;
+   padding-left: 0px;
+   padding-right: 0px;
 }
 
 /*---------------------------------------------------- debut section header */
 header{
+   width: 100%;
    display: flex;
    padding-left: 15px;
    padding-right:15px;
    align-items: center;
+   justify-content: center;
    padding-top: 15px;
    padding-bottom: 15px;
 }
@@ -52,27 +56,38 @@ header i{
    
 }
 
+
+header  img {
+   width: 150px;
+}
+
+
 /*------------------------------------------------------ section menu de la carte */
 /* Image plat restaurant */
 .card-menu-image {
-   height: 300px;/*1*/
+   height: 220px;/*1*/
    position: relative;/*2*/
    overflow: hidden;/*3*/
 }
+
+
 .card-menu-image img {
-   width: 100%;/*4*/
-   /*5 - Méthode de centrage en fonction de la taille de l'image */
+   width: 100%;
    position: absolute;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
 }
 
+
+
 /* nom restaurant */
 .nom-restaurant
-{  
-   width:50%;
-   display: flex;position: absolute;
+{
+   width: 100%;
+   height: 60px;
+   position: absolute;
+   display: flex;
    justify-content: space-between;
    align-items: center;
    background-color:#f2f2f2;
@@ -80,21 +95,40 @@ header i{
    padding-right: 15px;
    border-top-left-radius: 40px;
    border-top-right-radius: 40px;
-   top: 300px;
+   top: 220px;
 }
 
-.nom-restaurant i
+.heart
 {
+   color:grey;
    font-size: 30px;
-   color: black;
 }
+
+.heart:hover {
+   animation: fill 1s ease-out;
+   background: linear-gradient(#FF79DA, #9356DC);
+   -webkit-background-clip: text;
+   background-clip: text;
+   -webkit-text-fill-color: transparent; 
+   font-weight: bold;
+}
+
+@keyframes fill {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
 
 /*----------------------------section menu entrees - plats desserts */
 .card-menu-text
 {
    display: flex;
    flex-direction: column;
-   row-gap: 60px;
+   row-gap: 15px;
    padding-left: 15px;
    padding-right: 15px;
    padding-top: 15px;
@@ -113,6 +147,7 @@ header i{
 
 .menu-entrées ,.menu-plats , .menu-desserts
 {
+   width: 100%;
    display: flex;
    flex-direction: column;
    row-gap: 15px;
@@ -265,12 +300,12 @@ footer i{
 }
 .footercols
 {
-   width:auto;
+   width:100%;
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
    background-color: #353535;
-   gap: 30px;
+   gap: 20px;   
    padding: 30px;
 }
 
@@ -278,13 +313,134 @@ footer i{
    color:white;
 }
 
+.footercols h3 a {
+   color:white;
+}
+
+
+/*
+==========================================================================================
+Desktop
+==========================================================================================
+*/
+@media screen and (min-width: 992px)
+{
+   
+   /*----------------------------------------------------- debut section body */
+   .body
+   {
+      width: 50%;
+      margin-right: auto;
+      margin-left: auto;
+      
+   }
+   
+   /*---------------------------------------------------- debut section header */
+   header{
+      
+      display: flex;
+      padding-left: 15px;
+      padding-right:15px;
+      align-items: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+   }
+   
+   /* logo header */
+   header #logo
+   { 
+      width: auto;
+      margin-right: auto;
+      margin-left: auto;
+   }
+   /* icone header localisation */
+   header i{
+      font-size: 26px;
+      font-weight:bolder;
+      color: black;
+   }
+   /* icone fleche de navigation  */
+   .fa-arrow-lefts
+   {
+      font-size: large;
+      font-weight: bold;
+      
+   }
+   /*------------------------------------------------------ section menu de la carte */
+   /* Image plat restaurant */
+   .card-menu-image {
+      height: 300px;/*1*/
+      position: relative;/*2*/
+      overflow: hidden;/*3*/
+   }
+   .card-menu-image img {
+      width: 100%;/*4*/
+      /*5 - Méthode de centrage en fonction de la taille de l'image */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
+   
+   /* nom restaurant */
+   .nom-restaurant
+   {  
+      width:50%;
+      display: flex;position: absolute;
+      justify-content: space-between;
+      align-items: center;
+      background-color:#f2f2f2;
+      padding-left: 15px;
+      padding-right: 15px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      top: 300px;
+   }
+   
+   
+   
+   /*----------------------------section menu entrees - plats desserts */
+   .card-menu-text
+   {
+      display: flex;
+      flex-direction: column;
+      row-gap: 60px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 15px;
+      color: black;
+      background-color: #f2f2f2;
+      /* background-color: #d36bda; */
+      
+      
+   }
+   
+   
+   .menu-entrées ,.menu-plats , .menu-desserts
+   {
+      display: flex;
+      flex-direction: column;
+      row-gap: 15px;
+      overflow: hidden;
+      /* background-color: orange; */
+      
+   }
+   
+   
+   
+   
+   
+   
+   
+   
+}
 
 /*
 ==========================================================================================
 Tablette
 ==========================================================================================
 */
-@media screen and (max-width: 992px)
+@media screen and (min-width: 767px) and (max-width:991px)
 {
    /*--------------------------------------------- section body */
    .body
@@ -293,34 +449,23 @@ Tablette
       margin-bottom: 1%; 
    }
    
-   /*---------------------------- section fonctionnement procedure commande*/
-   .fonctionnements
-   {
-      display:flex ;
-      flex-direction: column;
-      gap: 10px;
-   }
-   .fonctionnement
-   {
-      display:flex ;
-      border: 1px solid #d9d9d9;
-      box-shadow: 3px 3px 5px  #999;
-      /* width: 250px; */
-      border-radius: 20px;
-   }
+   
    
    /*----------------------------------------------- section menu de la carte */
    .nom-restaurant
    {
       width:98%;
-      display: flex;position: absolute;
+      display: flex;
+      position: absolute;
       justify-content: center;
       align-items: center;
       background-color:#f2f2f2;
+      padding-left: 15px;
+      padding-right: 15px;
       gap: 20px ;
       border-top-left-radius: 40px;
       border-top-right-radius: 40px;
-      top: 300px;
+      top: 225px;
    }
    
    .menu-entrées,.menu-plats,.menu-desserts
@@ -332,153 +477,12 @@ Tablette
    }
    
    /*---------------------------------------------------- section footer */
-   .footercols
+   /* .footercols
    {
       gap:20%;
-   }
+   } */
 }
 
-/*
-==========================================================================================
-Mobile
-==========================================================================================
-*/
-@media screen and (max-width: 767px)
-{
-   /*---------------------------------------------- section body */
-   .body
-   {
-      width: 100%;
-      padding-left: 0px;
-      padding-right: 0px;
-   }
-   /*-------------------------------------- section header */
-   header{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      padding-left: 15px;
-      padding-right:15px;
-      align-items: center;
-      padding-top: 15px;
-      padding-bottom: 15px;
-   }
-   
-   /* Centrage logo */
-   
-   header i{
-      font-weight:bolder;
-      color: black;
-   }
-   
-   header #logo
-   {
-      width: auto;
-      margin-right: auto;
-      margin-left: auto;
-   }
-   
-   header  img {
-      width: 150px;
-   }
-   
-   /*----------------------------------- section procedure commande */
-   .fonctionnements
-   {
-      display:flex ;
-      flex-direction: column;
-      row-gap: 15px;
-      padding: 15px;
-   }
-   
-   .fonctionnement
-   {
-      display:flex ;
-      border: 1px solid #d9d9d9;
-      justify-content: flex-start;
-      gap: 15px;
-      border-radius: 20px;
-   }
-   
-   
-   /*------------------------------------------------------ section menu */
-   .card-menu-image {
-      height: 220px;/*1*/
-      position: relative;/*2*/
-      overflow: hidden;/*3*/
-   }
-   .card-menu-image img {
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      
-   }
-   
-   .nom-restaurant
-   {
-      width: 100%;
-      height: 60px;
-      position: absolute;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color:#f2f2f2;
-      padding-left: 15px;
-      padding-right: 15px;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-      top: 220px;
-   }
-   
-   .nom-restaurant i
-   {
-      font-size: 30px;
-      color: black;
-   }
-   
-   .card-menu-text
-   {
-      display: flex;
-      flex-direction: column;
-      row-gap: 60px;
-      padding-left: 15px;
-      padding-right: 15px;
-      padding-top: 15px;
-      color: black;
-      background-color: #f2f2f2;
-   }
-   
-   .menu-entrées ,.menu-plats ,.menu-desserts
-   {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      row-gap: 15px;
-   }
-   
-   /*---------------------------------------------- section footer */
-   footer .footercols #logofooter img {
-      width: 100px;
-      
-   }
-   
-   .footercols
-   {
-      width:100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      background-color: #353535;
-      gap: 20px;      
-   }
-   
-   .footercols h3 a {
-      color:white;
-   }
-   
-}
 
 
 

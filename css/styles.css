@@ -12,13 +12,15 @@
    font-family: 'Roboto', sans-serif;
 }
 
+
 /***************************************************************************************/
 /*                                     Desktop                                         */
 /***************************************************************************************/
 /* marge body */
 body
 {
-   margin:10px;
+   margin:0px;
+   /* margin:10px; */
 }
 
 /*---------------------------------------       debut spin loader */
@@ -87,12 +89,25 @@ header {
 /* logo */
 header #logo
 {
-   padding-top: 30px;
-   padding-bottom: 30px;
+   padding-top: 0px;
+   padding-bottom: 0px;
+   /* padding-top: 30px;
+   padding-bottom: 30px; */
 }
 
 header #logo img {
-   width: 200px;
+   /* width: 200px; */
+   width: 150px;
+}
+
+/* centrage logo */
+header div img
+{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   padding-bottom: 15px;
+   padding-top: 15px;
 }
 
 /* section localisation */
@@ -148,12 +163,13 @@ header #logo img {
 {
    width: auto;
    display:flex ;
-   flex-direction: row;
+   flex-direction: column;
    padding-top: 30px;
    padding-bottom: 30px;
    gap:60px;
    align-items: center ;
-   padding-left: 30px;
+   row-gap: 15px;
+   padding: 15px;
 }
 
 .numéro{
@@ -168,12 +184,14 @@ header #logo img {
 
 .fonctionnement
 {
-   display:flex ;
    width: 300px;
+   display:flex ;
+   justify-content: flex-start;
    align-items: center;
    gap: 15px;
    background-color: #f2f2f2;
    height: 60px;
+   border: 1px solid #d9d9d9;
    border-radius: 20px;
 }
 
@@ -186,23 +204,29 @@ header #logo img {
    flex-direction: column;
    justify-content:flex-start;
    background-color: #f2f2f2;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   padding-left: 10px;
+   padding-right: 10px;
    row-gap: 30px;
-   padding: 30px;
 }
 
 .les_flyers_restaurants
 {
    width: 100%;
-   display: flex; 
-   flex-direction: row; 
-   justify-content:space-between;
+   display: flex;
+   flex-direction: column;
+   justify-content:center;
+   row-gap: 20px; 
+   column-gap: 0; 
 }
 
 /* debut carte/flyer restaurant */
 .card {
-   width: 24%; 
+   width: 100%; 
+   height: auto;
    background-color: white; /*3*/
-   box-shadow: 0px 5px 20px #999; /*4*/
+   box-shadow: 0px 2px 5px #999; /*4*/
    border-radius: 20px;
 }
 .card a { 
@@ -284,17 +308,11 @@ header #logo img {
 
 
 
-/*------------------------------------------------------------ debut section footer */
-.footercols
-{
-   width:auto;
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   background-color: #353535;
-   row-gap: 30px;
-   padding: 30px;
-}
+/*
+==========================================================================================
+Section footer
+==========================================================================================
+*/
 
 .footer__logo {
    font-size: 24px;
@@ -302,23 +320,131 @@ header #logo img {
    color: white;
    margin-bottom: 15px;
 }
-/* icones footer */
+
+footer p
+{
+   display: inline;
+}
+
 footer i{
    margin-right: 10px;
    color:white;
 }
+.footercols
+{
+   width:100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   background-color: #353535;
+   gap: 20px;   
+   padding: 30px;
+}
 
-/* liens nav footer */
 .footercols a{
+   color:white;
+}
+
+.footercols h3 a {
    color:white;
 }
 
 /*
 ==========================================================================================
+Desktop
+==========================================================================================
+*/
+@media screen and (min-width: 992px)
+{
+   /*----------------------------------------------------- debut section body */
+   body
+   {
+      margin:10px;
+   }
+   
+   /* logo */
+   header #logo
+   {
+      
+      padding-bottom: 10px;
+   }
+   
+   header #logo img {
+      width: 200px;
+   }
+   
+   /* procedure a suivre pour commander */
+   .fonctionnements
+   {
+      width: auto;
+      display:flex ;
+      flex-direction: row;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      gap:60px;
+      align-items: center ;
+      padding-left: 30px;
+   }
+   
+   .fonctionnement
+   {
+      display:flex ;
+      width: 300px;
+      align-items: center;
+      gap: 15px;
+      background-color: #f2f2f2;
+      height: 60px;
+      border-radius: 20px;
+   }
+   
+   /*--------------------------------------------- debut section liste flyers restaurants */
+   
+   .liste_restaurants
+   {
+      width:100%;
+      display: flex;
+      flex-direction: column;
+      justify-content:flex-start;
+      background-color: #f2f2f2;
+      row-gap: 30px;
+      padding: 30px;
+   }
+   
+   .les_flyers_restaurants
+   {
+      width: 100%;
+      display: flex; 
+      flex-direction: row; 
+      justify-content:space-between;
+   }
+   
+   /* debut carte/flyer restaurant */
+   .card {
+      width: 24%; 
+      background-color: white; /*3*/
+      box-shadow: 0px 5px 20px #999; /*4*/
+      border-radius: 20px;
+   }
+   
+   /*------------------------------------------------------------ debut section footer */
+   .footercols
+   {
+      width:auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: #353535;
+      row-gap: 30px;
+      padding: 30px;
+   }
+   
+}
+/*
+==========================================================================================
 Tablette
 ==========================================================================================
 */
-@media screen and (max-width: 992px)
+@media screen and (min-width: 767px) and (max-width:991px)
 {
    /*-------------------------------------- debut section fonctionnement */
    .fonctionnements
@@ -326,6 +452,7 @@ Tablette
       display:flex ;
       flex-direction: column;
       row-gap: 30px;
+      padding-bottom: 30px;
    }
    .fonctionnement
    {
@@ -353,126 +480,10 @@ Tablette
    }
    
    /*------------------------------------- debut section footer */
-   .footercols
+   /* .footercols
    {
       gap:20%;
-   }
+   } */
 }
-
-/*
-==========================================================================================
-Mobile
-==========================================================================================
-*/
-@media screen and (max-width: 767px)
-{
-   /*---------------------------------------------------- debut section body    */
-   body
-   {
-      margin:0px;
-   }
-   
-   /*---------------------------------------------------- debut section header  */
-   header #logo
-   {
-      padding-top: 0px;
-      padding-bottom: 0px;
-   }
-   
-   header #logo img {
-      width: 150px;
-   }
-   
-   /* centrage logo */
-   header div img
-   {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      padding-bottom: 15px;
-      padding-top: 15px;
-   }
-   
-   
-   
-   /*------------------------------------ debut section procedure a suivre */
-   .fonctionnements
-   {
-      display:flex ;
-      flex-direction: column;
-      /* background-color: aqua; */
-      row-gap: 15px;
-      padding: 15px;
-   }
-   
-   .fonctionnement
-   {
-      display:flex ;
-      border: 1px solid #d9d9d9;
-      /* width: 100%; */
-      justify-content: flex-start;
-      gap: 15px;
-      /* width: fit-content; */
-      border-radius: 20px;
-   }
-   
-   
-   /*----------------------------------------------- debut section lste restaurant */
-   .liste_restaurants
-   {
-      width:100%;
-      display: flex;
-      flex-direction: column;
-      justify-content:flex-start;
-      
-      padding-top: 30px;
-      padding-left: 10px;
-      padding-right: 10px;
-      row-gap: 30px;
-      background-color: #f2f2f2;
-   }
-   
-   .les_flyers_restaurants
-   {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content:center;
-      row-gap: 20px; 
-      column-gap: 0; 
-   }
-   
-   /* flyer restaurant */
-   .card {
-      width: 100%; 
-      height: auto;
-      background-color: white; /*3*/
-      box-shadow: 0px 2px 5px #999; /*4*/
-   }
-   
-   /*-----------------------------------------------------  debut section footer */
-   
-   .footercols
-   {
-      width:100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      background-color: #353535;
-      gap: 20px;      
-   }
-   
-   /* logo footer */
-   footer .footercols #logofooter img {
-      width: 100px;
-      
-   }
-   *
-   .footercols h3 a {
-      color:white;
-   }
-   
-}
-
 
 
